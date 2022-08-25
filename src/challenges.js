@@ -7,18 +7,22 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * altura / 2);
+  return (base * height / 2);
 }
 
 // Desafio 3
-function splitSentence() {
-  split = splitSentence.split()
-  return split;
+function splitSentence(string) {
+  let result = string.split(" ");
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  return concatName.length -1 + concatName[0];
+function concatName(string) {
+    
+  let firstName = string[0];
+  let lastName = string[string.length -1];
+  let result = lastName + ", " + firstName;
+  return result;
 }
 
 // Desafio 5
