@@ -18,7 +18,6 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-    
   let firstName = string[0];
   let lastName = string[string.length -1];
   let result = lastName + ", " + firstName;
@@ -37,41 +36,55 @@ function highestCount(array) {
   let count = 0;
 
   for (let index in array) {
-      if (array[index] > numMaior) {
-          numMaior = array[index];
-      }
+    if (array[index] > numMaior) {
+      numMaior = array[index];
+    }
   }
   for (let index2 in array) {
-      if (array[index2] === numMaior) {
-          count += 1;
-      }
+    if (array[index2] === numMaior) {
+      count += 1;
+    }
   }
-  
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
-      return "cat1";
+    return "cat1";
   } else if ((Math.abs(mouse - cat1)) === (Math.abs(mouse - cat2))) {
-      return "os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
   } else {
-      return "cat2";
+    return "cat2";
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let strings = [];
+  for (let index in array) {
+      if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+          strings.push("fizzBuzz");
+       } else if(array[index] % 5 === 0) {
+          strings.push("buzz");
+       } else if(array[index] % 3 === 0) {
+          strings.push("fizz")
+       }
+       else{
+          strings.push("bug!");
+      }
+  }
+  return strings;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodeString) {
+  let newEncode = encodeString.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+  return newEncode;
 }
-function decode() {
-  // seu código aqui
+function decode(decodeString) {
+  let newDecode = decodeString.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u");
+  return newDecode;
 }
 
 // Desafio 10
